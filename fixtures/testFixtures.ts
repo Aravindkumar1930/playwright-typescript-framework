@@ -1,9 +1,10 @@
 import {test as base, Page} from '@playwright/test'
 import { LoginPage } from '../Pages/LoginPage'
 import { ProductsPage } from '../Pages/ProductsPage'
-import { CartPage } from '../Pages/cartPage';
+import { CartPage } from '../Pages/CartPage';
 import { CheckoutPage } from '../Pages/CheckoutPage';
 import { APIRequestContext, request as playwrightRequest } from '@playwright/test';
+import process from 'process';
 
 
 type Myfixture ={
