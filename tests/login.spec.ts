@@ -3,6 +3,7 @@ import { invalidPasswordUser, lockedUser, validUser } from '../test-data/users';
 import { generateRandomEmail } from '../utils/randomData';
 import { getTodayDate } from '../utils/dateutili';
 
+// Login automation test
 test('login test with valid user', async ({page,loginpage,productpage})=>{
 await page.goto('/');
 
