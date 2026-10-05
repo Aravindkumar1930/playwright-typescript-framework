@@ -7,10 +7,11 @@ import { getTodayDate } from '../utils/dateutili';
 test('login test with valid user', async ({page,loginpage,productpage})=>{
 await page.goto('/');
 
-await loginpage.login(process.env.TEST_USERNAME!,process.env.TEST_PASSWORD!);
+const env = (globalThis as unknown as { process: { env: Record<string, string | undefined> } }).process.env;
+await loginpage.login(env.TEST_USERNAME!,env.TEST_PASSWORD!);
 await productpage.productpage();
-const todayDate = getTodayDate();
-console.log('Today Date:', todayDate);
+//const todayDate = getTodayDate();
+//console.log('Today Date:', todayDate);
 })
 
 test('login test with locked user', async ({page,loginpage})=>{
